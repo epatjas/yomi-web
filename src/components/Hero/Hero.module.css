@@ -1,0 +1,96 @@
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero {
+  background-color: #FFE55C;
+  height: 800px;
+  border-radius: 24px;
+  margin: 1rem 0;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-image: url('/hero-cat.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 50% auto;
+}
+
+.container {
+  width: 100%;
+  padding: 6rem 4rem;
+  position: relative;
+}
+
+.content {
+  max-width: 540px;
+  margin-left: 50%;
+  padding-right: 0;
+}
+
+.content h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #171717;
+}
+
+.content p {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: #171717;
+  opacity: 0.8;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 100px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0;
+  }
+
+  .hero {
+    margin: 0;
+    border-radius: 0;
+    height: auto;
+    min-height: 500px;
+    background-size: 100% auto;
+    background-position: center bottom;
+  }
+
+  .container {
+    padding: 6rem 1.5rem 50% 1.5rem;
+    text-align: center;
+  }
+
+  .content {
+    margin: 0 auto;
+    text-align: center;
+  }
+} 
