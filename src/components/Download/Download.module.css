@@ -1,0 +1,153 @@
+.wrapper {
+  max-width: 1600px;
+  width: 100%;
+  margin: 6rem auto;
+  padding: 0 2rem;
+}
+
+.content {
+  background-color: #191A22;
+  border-radius: 32px;
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.text {
+  max-width: 580px;
+  grid-column: 2;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: #EEEFFB;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #EEEFFB;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.download {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1.25rem;
+  background: #20212D;
+  border-radius: 24px;
+  border: 1px solid #2C2D3B;
+}
+
+.downloadText {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #EEEFFB;
+  padding-bottom: 8px;
+}
+
+.qrCode {
+  width: 140px;
+  height: 140px;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+}
+
+.imageWrapper {
+  width: 100%;
+  max-width: 360px;
+  margin: 0;
+  margin-left: 80px;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #191A22;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 3rem;
+    gap: 4rem;
+    grid-template-columns: 400px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .title {
+    order: 1;
+  }
+
+  .description {
+    order: 2;
+  }
+
+  .imageWrapper {
+    max-width: 320px;
+    margin: 0 auto;
+    order: 3;
+  }
+
+  .download {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    order: 4;
+  }
+
+  .downloadText {
+    font-size: 1.25rem;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .qrCode {
+    width: 120px;
+    height: 120px;
+    align-self: center;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+} 

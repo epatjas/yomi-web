@@ -20,7 +20,7 @@ export default function Features() {
   ];
 
   return (
-    <section className={styles.wrapper}>
+    <section id="features" className={styles.wrapper}>
       <h2 className={styles.title}>
         Smart reading tool that adapts to each child's needs.
       </h2>

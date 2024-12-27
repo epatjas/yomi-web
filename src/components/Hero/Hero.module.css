@@ -48,20 +48,64 @@
 }
 
 .cta {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
   font-size: 1rem;
   font-weight: 500;
   color: #000;
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
   border-radius: 100px;
   text-decoration: none;
-  transition: all 0.2s ease;
+  transition: all 0.1s ease;
 }
 
+@keyframes rollText {
+  0% {
+    transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translate3d(0, 100%, 0) rotate3d(1, 0, 0, -90deg);
+    opacity: 0;
+  }
+  51% {
+    transform: translate3d(0, -100%, 0) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(0, 0, 0) rotate3d(1, 0, 0, 0deg);
+    opacity: 1;
+  }
+}
+
+.ctaText {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  perspective: 1000px;
+}
+
+.cta:hover .ctaText {
+  animation: rollText 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.ctaIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #171717;
+  border-radius: 50%;
+  color: white;
+}
+
+/* Hover animations */
 .cta:hover {
-  background-color: #f5f5f5;
+  background-color: white;
+  border-color: #000;
 }
 
 @media (max-width: 1024px) {
@@ -72,25 +116,57 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .hero {
-    margin: 0;
-    border-radius: 0;
+    margin: 0.5rem 0;
     height: auto;
-    min-height: 500px;
-    background-size: 100% auto;
-    background-position: center bottom;
+    min-height: 800px;
+    border-radius: 32px;
+    background-size: 140% auto;
+    background-position: center 105%;
+    display: block;
   }
 
   .container {
-    padding: 6rem 1.5rem 50% 1.5rem;
-    text-align: center;
+    padding: 3rem 1rem;
   }
 
   .content {
-    margin: 0 auto;
-    text-align: center;
+    margin: 0;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .content h1 {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .content p {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    max-width: 90%;
+  }
+
+  .cta {
+    margin: 0;
+  }
+}
+
+/* Add smaller screen support */
+@media (max-width: 480px) {
+  .hero {
+    min-height: 700px;
+  }
+
+  .container {
+    padding: 2rem 1.25rem;
+  }
+
+  .content h1 {
+    font-size: clamp(1.75rem, 7vw, 2rem);
   }
 } 
