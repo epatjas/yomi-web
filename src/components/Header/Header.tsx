@@ -1,15 +1,16 @@
 import styles from './Header.module.css';
 import { ArrowRight } from 'lucide-react';
 import { Menu } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <div className={styles.wrapper}>
       <header className={styles.header}>
         <div className={styles.container}>
-          <a href="#" className={styles.logo}>
+          <Link href="/" className={styles.logo}>
             <span>yomi</span>
-          </a>
+          </Link>
           
           <nav className={styles.nav}>
             <ul>

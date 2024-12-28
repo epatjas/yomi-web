@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './Logo.module.css';
+import Link from 'next/link';
 
 export default function Logo() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -12,8 +13,8 @@ export default function Logo() {
   };
 
   return (
-    <a href="/" className={styles.logo} onClick={handleClick}>
+    <Link href="/" className={styles.logo} onClick={handleClick}>
       <span>yomi</span>
-    </a>
+    </Link>
   );
 } 

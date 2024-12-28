@@ -1,4 +1,5 @@
 import styles from './Learning.module.css';
+import Image from 'next/image';
 
 export default function Learning() {
   const items = [
@@ -29,10 +30,12 @@ export default function Learning() {
         {items.map((item, index) => (
           <div key={index} className={styles.item}>
             <div className={styles.imageWrapper}>
-              <img 
+              <Image
                 src={item.image} 
                 alt={item.alt}
                 className={styles.image}
+                width={400}
+                height={400}
               />
             </div>
             <p className={styles.description}>{item.title}</p>

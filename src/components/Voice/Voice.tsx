@@ -1,4 +1,5 @@
 import styles from './Voice.module.css';
+import Image from 'next/image';
 
 export default function Voice() {
   const items = [
@@ -36,10 +37,12 @@ export default function Voice() {
           <div key={index} className={styles.item}>
             <div className={styles.imageWrapper}>
               <p className={styles.description}>{item.title}</p>
-              <img 
+              <Image 
                 src={item.image} 
                 alt={item.alt}
                 className={styles.image}
+                width={400}
+                height={400}
               />
               <span className={styles.tag}>{item.tag}</span>
             </div>

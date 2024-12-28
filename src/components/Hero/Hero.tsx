@@ -9,7 +9,7 @@ export default function Hero() {
           <div className={styles.content}>
             <h1>Read, grow and evolve with Yomi.</h1>
             <p>
-              Yomi is your child's virtual reading companion that grows and evolves through reading activities. Think Tamagotchi meets reading tutor - the more your child reads, the more Yomi thrives!
+              Yomi is your child&apos;s virtual reading companion that grows and evolves through reading activities. Think Tamagotchi meets reading tutor - the more your child reads, the more Yomi thrives!
             </p>
             <a href="#download" className={styles.cta}>
               <span className={styles.ctaText}>Try out for free</span>

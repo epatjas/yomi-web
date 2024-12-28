@@ -1,4 +1,5 @@
 import styles from './Benefits.module.css';
+import Image from 'next/image';
 
 export default function Benefits() {
   const benefits = [
@@ -29,10 +30,12 @@ export default function Benefits() {
         {benefits.map((benefit, index) => (
           <div key={index} className={styles.benefit}>
             <div className={styles.imageWrapper}>
-              <img 
+              <Image 
                 src={benefit.image} 
                 alt={benefit.alt}
                 className={styles.image}
+                width={400}
+                height={400}
               />
             </div>
             <p className={styles.description}>{benefit.title}</p>

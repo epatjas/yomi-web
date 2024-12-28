@@ -1,4 +1,5 @@
 import styles from './Features.module.css';
+import Image from 'next/image';
 
 export default function Features() {
   const features = [
@@ -29,10 +30,12 @@ export default function Features() {
         {features.map((feature, index) => (
           <div key={index} className={styles.feature}>
             <div className={styles.imageWrapper}>
-              <img 
+              <Image 
                 src={feature.image} 
                 alt={feature.alt}
                 className={styles.image}
+                width={400}
+                height={400}
               />
             </div>
             <p className={styles.description}>{feature.title}</p>
