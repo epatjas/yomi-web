@@ -5,7 +5,7 @@ export default function Features() {
   const features = [
     {
       image: '/image 1.png',
-      title: 'Every reader finds their perfect story level.',
+      title: "Every reader finds their perfect story level.",
       alt: 'Mobile app showing book selection interface'
     },
     {
@@ -23,7 +23,7 @@ export default function Features() {
   return (
     <section id="features" className={styles.wrapper}>
       <h2 className={styles.title}>
-        Smart reading tool that adapts to each child's needs.
+        Smart reading tool that adapts to each child&apos;s needs.
       </h2>
       
       <div className={styles.grid}>
